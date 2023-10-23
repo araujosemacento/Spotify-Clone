@@ -3,25 +3,132 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --text-50: 144 77% 95%;
+  --text-100: 142 80% 90%;
+  --text-200: 142 80% 80%;
+  --text-300: 142 80% 70%;
+  --text-400: 142 80% 60%;
+  --text-500: 142 80% 50%;
+  --text-600: 142 80% 40%;
+  --text-700: 142 80% 30%;
+  --text-800: 142 80% 20%;
+  --text-900: 142 80% 10%;
+  --text-950: 141 77% 5%;
+
+  --background-50: 141 100% 95%;
+  --background-100: 140 100% 90%;
+  --background-200: 140 100% 80%;
+  --background-300: 140 100% 70%;
+  --background-400: 140 100% 60%;
+  --background-500: 140 100% 50%;
+  --background-600: 140 100% 40%;
+  --background-700: 140 100% 30%;
+  --background-800: 140 100% 20%;
+  --background-900: 140 100% 10%;
+  --background-950: 141 100% 5%;
+
+  --primary-50: 142 76% 95%;
+  --primary-100: 142 76% 90%;
+  --primary-200: 142 76% 80%;
+  --primary-300: 142 76% 70%;
+  --primary-400: 142 76% 60%;
+  --primary-500: 142 76% 50%;
+  --primary-600: 142 76% 40%;
+  --primary-700: 142 76% 30%;
+  --primary-800: 142 76% 20%;
+  --primary-900: 142 76% 10%;
+  --primary-950: 142 76% 5%;
+
+  --secondary-50: 140 84% 95%;
+  --secondary-100: 142 80% 90%;
+  --secondary-200: 142 82% 80%;
+  --secondary-300: 142 82% 70%;
+  --secondary-400: 142 82% 60%;
+  --secondary-500: 142 82% 50%;
+  --secondary-600: 142 82% 40%;
+  --secondary-700: 142 82% 30%;
+  --secondary-800: 142 82% 20%;
+  --secondary-900: 142 80% 10%;
+  --secondary-950: 143 84% 5%;
+
+  --accent-50: 136 76% 95%;
+  --accent-100: 138 76% 90%;
+  --accent-200: 138 75% 80%;
+  --accent-300: 138 75% 70%;
+  --accent-400: 138 75% 60%;
+  --accent-500: 138 75% 50%;
+  --accent-600: 138 75% 40%;
+  --accent-700: 138 75% 30%;
+  --accent-800: 138 75% 20%;
+  --accent-900: 138 76% 10%;
+  --accent-950: 139 76% 5%;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --text-50: 141 77% 5%;
+    --text-100: 142 80% 10%;
+    --text-200: 142 80% 20%;
+    --text-300: 142 80% 30%;
+    --text-400: 142 80% 40%;
+    --text-500: 142 80% 50%;
+    --text-600: 142 80% 60%;
+    --text-700: 142 80% 70%;
+    --text-800: 142 80% 80%;
+    --text-900: 142 80% 90%;
+    --text-950: 144 77% 95%;
+
+    --background-50: 141 100% 5%;
+    --background-100: 140 100% 10%;
+    --background-200: 140 100% 20%;
+    --background-300: 140 100% 30%;
+    --background-400: 140 100% 40%;
+    --background-500: 140 100% 50%;
+    --background-600: 140 100% 60%;
+    --background-700: 140 100% 70%;
+    --background-800: 140 100% 80%;
+    --background-900: 140 100% 90%;
+    --background-950: 141 100% 95%;
+
+    --primary-50: 142 76% 5%;
+    --primary-100: 142 76% 10%;
+    --primary-200: 142 76% 20%;
+    --primary-300: 142 76% 30%;
+    --primary-400: 142 76% 40%;
+    --primary-500: 142 76% 50%;
+    --primary-600: 142 76% 60%;
+    --primary-700: 142 76% 70%;
+    --primary-800: 142 76% 80%;
+    --primary-900: 142 76% 90%;
+    --primary-950: 142 76% 95%;
+
+    --secondary-50: 143 84% 5%;
+    --secondary-100: 142 80% 10%;
+    --secondary-200: 142 82% 20%;
+    --secondary-300: 142 82% 30%;
+    --secondary-400: 142 82% 40%;
+    --secondary-500: 142 82% 50%;
+    --secondary-600: 142 82% 60%;
+    --secondary-700: 142 82% 70%;
+    --secondary-800: 142 82% 80%;
+    --secondary-900: 142 80% 90%;
+    --secondary-950: 140 84% 95%;
+
+    --accent-50: 139 76% 5%;
+    --accent-100: 138 76% 10%;
+    --accent-200: 138 75% 20%;
+    --accent-300: 138 75% 30%;
+    --accent-400: 138 75% 40%;
+    --accent-500: 138 75% 50%;
+    --accent-600: 138 75% 60%;
+    --accent-700: 138 75% 70%;
+    --accent-800: 138 75% 80%;
+    --accent-900: 138 76% 90%;
+    --accent-950: 136 76% 95%;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Montserrat, sans-serif;
+  @apply text-text-900 bg-background-50;
 }
